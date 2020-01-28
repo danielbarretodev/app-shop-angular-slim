@@ -1,0 +1,47 @@
+#content{
+  margin-top: 30px;
+  border:1px solid #ccc;
+  border-radius: 2px;
+  background: white;
+  box-shadow: 4px 4px 4px 4px #ccc;
+}
+
+#header{
+  background: #E03137;
+  height: 70px;
+
+}
+
+#header h1 {
+  display: grid;
+  height: 100%;
+  align-content: center;
+  text-align: center;
+  border: 0px;
+  margin: 0px;
+}
+
+.activado{
+
+  border-bottom: 2px solid white;
+}
+
+
+#form-producto label {
+  margin-top: 10px;
+}
+
+
+.producto_img {
+  width: 100%;
+  height: 200px;
+  margin: 0px auto;
+  display: block;
+  max-width: 100%;
+}
+
+.img_relleno {
+  background: #ccc;
+  /*width: 100%;*/
+  height: 200px;
+}

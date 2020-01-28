@@ -1,0 +1,32 @@
+<p>productos-list works!</p>
+<hr/>
+
+<div *ngIf="!productos">
+  Cargando Productos..
+</div>
+
+<div class="" *ngIf="productos">
+  <div class="row ">
+    <div class="col-lg-3 col-sm-5" *ngFor="let producto of productos">
+      <div  class="thumbnail border p-2 m-2" style="height: 400px;">
+      <div *ngIf="producto.imagen">
+        <img  src="http://localhost/angular4/backend/uploads/{{producto.imagen}}"
+         class="producto_img"/>
+         </div>
+        <div *ngIf="!producto.imagen">
+          <div class="img_relleno"></div>
+        </div>
+        <div class="caption">
+          <h3>{{producto.nombre}}</h3>
+          <p>{{producto.precio}} €</p>
+        </div>
+          <p class="">
+            <a href="#" class="btn btn-md btn-success">Ver</a>
+            <a href="#" class="btn btn-md  btn-warning text-light m-1">Editar</a>
+            <a href="#" class="btn btn-md  btn-danger">Eliminar</a>
+
+          </p>
+      </div>
+    </div>
+  </div>
+</div>

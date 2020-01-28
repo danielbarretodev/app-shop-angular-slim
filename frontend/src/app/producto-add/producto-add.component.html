@@ -1,0 +1,30 @@
+<p>productos-add works!</p>
+<hr/>
+
+<form #formProducto="ngForm" (ngSubmit)="onSubmit()" class="col-lg-6" id="form-producto">
+
+  <label>
+    Nombre
+    <span *ngIf="nombre.invalid && nombre.touched" class="label alert-danger">El nombre es obligatorio</span>
+  </label>
+  <input type="text" #nombre="ngModel" name="nombre" [(ngModel)]="producto.nombre" class="form-control" required/>
+
+
+
+  <label>
+    Descripcion
+    <span *ngIf="descripcion.invalid && descripcion.touched" class="label alert-danger">La descripcion es obligatoria</span>
+  </label>
+  <textarea #descripcion="ngModel" name="descripcion" [(ngModel)]="producto.description" class="form-control" required></textarea>
+
+  <label>
+    Precio
+    <span *ngIf="precio.invalid && precio.touched" class="label alert-danger">El Precio es obligatorio</span>
+  </label>
+  <input type="text" #precio="ngModel" name="precio" [(ngModel)]="producto.precio" class="form-control" required/>
+
+  <label>Imagen</label>
+  <input type="file" class="form-control" (change)="fileChangeEvent($event)"/>
+
+  <input type="submit" name="" value="{{titulo}}" class="mt-3 btn btn-primary">
+</form>
